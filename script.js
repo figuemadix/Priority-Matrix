@@ -201,4 +201,3 @@ document.querySelectorAll('.priority-cell').forEach(el => el.classList.remove('h
 document.getElementById(`priority-${highest}`).classList.add('highlight');
 }
 
-~
