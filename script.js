@@ -40,7 +40,7 @@ const translations = {
     header_title: "Priority Matrix Tool",
   },
   pt: {
-    language_select: "Selecione o idioma:",
+    language_selector: "Selecione o idioma:",
     impact: "Impacto",
     business: "Negócios:",
     outage: "Interrupção:",
