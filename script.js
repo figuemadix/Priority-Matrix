@@ -82,7 +82,7 @@ medium_data: "Médio - Problema de exibição do PI Vision",
 low_data: "Baixo - Criação ou atualização de ponto PI",
 header_title: "Ferramenta de Matriz de Prioridade",
 calculate: "Calcular Prioridade"
-},
+}
 };
 
 function changeLanguage() {
