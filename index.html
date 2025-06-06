@@ -1,111 +1,111 @@
+<!-- index.html atualizado com logo fixado à esquerda e seletor de idioma -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Priority Matrix Tool</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="header">
-    <img src="assets/logo.png" alt="SBM Offshore Logo" class="logo">
-    <span class="title" data-i18n="title">Priority Matrix Tool</span>
+    <img src="assets/logo.png" alt="Logo" class="logo" />
+    <div class="language-selector">
+      <label for="language-select" data-i18n="selectLanguage">Select Language:</label>
+      <select id="language-select">
+        <option value="en" selected>English</option>
+        <option value="pt">Português</option>
+      </select>
+    </div>
   </header>
 
-  <div class="language-selector">
-    <label for="language-select" data-i18n="select-language">Select Language:</label>
-    <select id="language-select" onchange="changeLanguage()">
-      <option value="en" selected>English</option>
-      <option value="pt">Português</option>
-    </select>
-  </div>
+  <main>
+    <h1 data-i18n="title">Priority Matrix Tool</h1>
 
-  <div class="container">
-    <div class="card">
-      <h2 data-i18n="impact">Impact</h2>
-      <label for="impact-business" data-i18n="impact-business">Business:</label>
-      <select id="impact-business">
-        <option value="">Select</option>
-        <option value="extensive" data-i18n="extensive-business">Extensive - Highly business critical</option>
-        <option value="significant" data-i18n="significant-business">Significant - Business outage</option>
-        <option value="moderate" data-i18n="moderate-business">Moderate - Moderate impact</option>
-        <option value="localized" data-i18n="localized-business">Localized - Low impact</option>
-      </select>
+    <div class="container">
+      <!-- Impact Section -->
+      <div class="card">
+        <h2 data-i18n="impact">Impact</h2>
+        <label for="impact-business" data-i18n="impactBusiness">Business:</label>
+        <select id="impact-business">
+          <option value="">Select</option>
+          <option value="extensive">Extensive - Highly business critical</option>
+          <option value="significant">Significant - Business outage</option>
+          <option value="moderate">Moderate - Moderate impact</option>
+          <option value="localized">Localized - Low impact</option>
+        </select>
+        <label for="impact-outage" data-i18n="impactOutage">Outage:</label>
+        <select id="impact-outage">
+          <option value="">Select</option>
+          <option value="extensive">Extensive - Division-wide</option>
+          <option value="significant">Significant - Regional</option>
+          <option value="moderate">Moderate - Site-wide</option>
+          <option value="localized">Localized - Local</option>
+        </select>
+        <label for="impact-users" data-i18n="impactUsers">Impacted Users:</label>
+        <select id="impact-users">
+          <option value="">Select</option>
+          <option value="extensive">100+ users</option>
+          <option value="significant">50-99 users</option>
+          <option value="moderate">6-49 users</option>
+          <option value="localized">1-5 users</option>
+        </select>
+        <label for="impact-points" data-i18n="impactPoints">PI Points:</label>
+        <select id="impact-points">
+          <option value="">Select</option>
+          <option value="extensive">2k+ points</option>
+          <option value="significant">1k-2k points</option>
+          <option value="moderate">500-1k points</option>
+          <option value="localized">Less than 500</option>
+        </select>
+      </div>
 
-      <label for="impact-outage" data-i18n="impact-outage">Outage:</label>
-      <select id="impact-outage">
-        <option value="">Select</option>
-        <option value="extensive" data-i18n="extensive-outage">Extensive - Division-wide</option>
-        <option value="significant" data-i18n="significant-outage">Significant - Regional</option>
-        <option value="moderate" data-i18n="moderate-outage">Moderate - Site-wide</option>
-        <option value="localized" data-i18n="localized-outage">Localized - Local</option>
-      </select>
-
-      <label for="impact-users" data-i18n="impact-users">Impacted Users:</label>
-      <select id="impact-users">
-        <option value="">Select</option>
-        <option value="extensive" data-i18n="extensive-users">100+ users</option>
-        <option value="significant" data-i18n="significant-users">50-99 users</option>
-        <option value="moderate" data-i18n="moderate-users">6-49 users</option>
-        <option value="localized" data-i18n="localized-users">1-5 users</option>
-      </select>
-
-      <label for="impact-points" data-i18n="impact-points">PI Points:</label>
-      <select id="impact-points">
-        <option value="">Select</option>
-        <option value="extensive" data-i18n="extensive-points">2k+ points</option>
-        <option value="significant" data-i18n="significant-points">1k-2k points</option>
-        <option value="moderate" data-i18n="moderate-points">500-1k points</option>
-        <option value="localized" data-i18n="localized-points">Less than 500</option>
-      </select>
+      <!-- Urgency Section -->
+      <div class="card">
+        <h2 data-i18n="urgency">Urgency</h2>
+        <label for="urgency-damage" data-i18n="urgencyDamage">Damage Increasing:</label>
+        <select id="urgency-damage">
+          <option value="">Select</option>
+          <option value="critical">Critical - Rapid increase</option>
+          <option value="high">High - Considerable increase</option>
+          <option value="medium">Medium - Moderate</option>
+          <option value="low">Low - Marginal</option>
+        </select>
+        <label for="urgency-work" data-i18n="urgencyWork">Work Stopped:</label>
+        <select id="urgency-work">
+          <option value="">Select</option>
+          <option value="critical">Critical - Highly time sensitive</option>
+          <option value="high">High - Time sensitive</option>
+          <option value="medium">Medium - Inconvenient</option>
+          <option value="low">Low - Not urgent</option>
+        </select>
+        <label for="urgency-data" data-i18n="urgencyData">Data:</label>
+        <select id="urgency-data">
+          <option value="">Select</option>
+          <option value="critical">Critical - Loss/unavailable</option>
+          <option value="high">High - Performance issue</option>
+          <option value="medium">Medium - PI Vision issues</option>
+          <option value="low">Low - Point creation/update</option>
+        </select>
+      </div>
     </div>
 
-    <div class="card">
-      <h2 data-i18n="urgency">Urgency</h2>
-      <label for="urgency-damage" data-i18n="urgency-damage">Damage Increasing:</label>
-      <select id="urgency-damage">
-        <option value="">Select</option>
-        <option value="critical" data-i18n="critical-damage">Critical - Rapid increase</option>
-        <option value="high" data-i18n="high-damage">High - Considerable increase</option>
-        <option value="medium" data-i18n="medium-damage">Medium - Moderate</option>
-        <option value="low" data-i18n="low-damage">Low - Marginal</option>
-      </select>
-
-      <label for="urgency-work" data-i18n="urgency-work">Work Stopped:</label>
-      <select id="urgency-work">
-        <option value="">Select</option>
-        <option value="critical" data-i18n="critical-work">Critical - Highly time sensitive</option>
-        <option value="high" data-i18n="high-work">High - Time sensitive</option>
-        <option value="medium" data-i18n="medium-work">Medium - Inconvenient</option>
-        <option value="low" data-i18n="low-work">Low - Not urgent</option>
-      </select>
-
-      <label for="urgency-data" data-i18n="urgency-data">Data:</label>
-      <select id="urgency-data">
-        <option value="">Select</option>
-        <option value="critical" data-i18n="critical-data">Critical - Loss/unavailable</option>
-        <option value="high" data-i18n="high-data">High - Performance issue</option>
-        <option value="medium" data-i18n="medium-data">Medium - PI Vision issues</option>
-        <option value="low" data-i18n="low-data">Low - Point creation/update</option>
-      </select>
+    <div class="button-container">
+      <button onclick="calculatePriority()" data-i18n="calculate">Calculate Priority</button>
     </div>
-  </div>
 
-  <div class="button-container">
-    <button onclick="calculatePriority()" data-i18n="calculate">Calculate Priority</button>
-  </div>
+    <p id="result"></p>
+    <div class="error" id="error-message"></div>
 
-  <p id="result"></p>
-  <div class="error" id="error-message"></div>
+    <div class="priority-matrix">
+      <div class="priority-cell priority-1" id="priority-1">1 Critical</div>
+      <div class="priority-cell priority-2" id="priority-2">2 High</div>
+      <div class="priority-cell priority-3" id="priority-3">3 Medium</div>
+      <div class="priority-cell priority-4" id="priority-4">4 Low</div>
+    </div>
+  </main>
 
-  <div class="priority-matrix">
-    <div class="priority-cell priority-1" id="priority-1" data-i18n="critical">1 Critical</div>
-    <div class="priority-cell priority-2" id="priority-2" data-i18n="high">2 High</div>
-    <div class="priority-cell priority-3" id="priority-3" data-i18n="medium">3 Medium</div>
-    <div class="priority-cell priority-4" id="priority-4" data-i18n="low">4 Low</div>
-  </div>
-
-  <script src="script.js"></script>
   <script src="i18n.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
