@@ -1,5 +1,6 @@
 const translations = {
   en: {
+    language: "Select language:",
     impact: "Impact",
     business: "Business:",
     outage: "Outage:",
@@ -38,8 +39,11 @@ const translations = {
     medium_data: "Medium - PI Vision display issue",
     low_data: "Low - PI Point creation or update",
     header_title: "Priority Matrix Tool",
+    calculate: "Calculate Priority",
+
   },
   pt: {
+    language: "Selecione o idioma:",
     impact: "Impacto",
     business: "Negócios:",
     outage: "Interrupção:",
@@ -78,6 +82,8 @@ const translations = {
     medium_data: "Médio - Problema de exibição do PI Vision",
     low_data: "Baixo - Criação ou atualização de ponto PI",
     header_title: "Ferramenta de Matriz de Prioridade",
+    calculate: "Calcular Prioridade",
+    
   },
 };
 
@@ -85,9 +91,12 @@ function changeLanguage() {
   const lang = document.getElementById("language-select").value;
 
   // Update headers
+  document.querySelector("label[for='language-select']").textContent = translations[lang].language;
   document.querySelector("h1").textContent = translations[lang].header_title;
   document.querySelectorAll(".card > h2")[0].textContent = translations[lang].impact;
   document.querySelectorAll(".card > h2")[1].textContent = translations[lang].urgency;
+  document.options("button[onclick='calculatePriority()']").textContent = translations[lang].calculate;
+ 
 
   // Update labels for Impact
   document.querySelector("label[for='impact-business']").textContent = translations[lang].business;
@@ -148,6 +157,8 @@ function changeLanguage() {
   urgencyData.options[1].textContent = translations[lang].high_data;
   urgencyData.options[2].textContent = translations[lang].medium_data;
   urgencyData.options[3].textContent = translations[lang].low_data;
+
+  
 }
 
 window.onload = function () {
@@ -194,5 +205,3 @@ function calculatePriority() {
   document.querySelectorAll('.priority-cell').forEach(el => el.classList.remove('highlight'));
   document.getElementById(`priority-${highest}`).classList.add('highlight');
 }
-
-
