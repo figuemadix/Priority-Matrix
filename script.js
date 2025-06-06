@@ -195,6 +195,6 @@ function calculatePriority() {
   document.getElementById(`priority-${highest}`).classList.add('highlight');
 }
 
-function changeLanguage() {
-  alert("🌐 Language switching is not yet implemented.");
-}
+//function changeLanguage() {
+  //alert("🌐 Language switching is not yet implemented.");
+//}
