@@ -12,7 +12,25 @@
 * {
   box-sizing: border-box;
 }
+.header {
+  display: flex;
+  align-items: left;
+  padding: 10px 0;
+}
 
+.logo {
+  height: 50px;
+  width: auto;
+  margin-right: 12px;
+  align-items: left;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--text);
+  align-items: left;
+}
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
