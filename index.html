@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Priority Matrix Tool</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <img src="assets/logo.png" alt="Logo" class="logo" />
+    <h1>Priority Matrix Tool</h1>
+  </header>
+
+  <div class="language-selector">
+    <label for="language-select">Select Language:</label>
+    <select id="language-select" onchange="changeLanguage()">
+      <option value="en" selected>English</option>
+      <option value="pt">Português</option>
+    </select>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h2>Impact</h2>
+      <label for="impact-business">Business:</label>
+      <select id="impact-business">
+        <option value="">Select</option>
+        <option value="extensive">Extensive - Highly business critical</option>
+        <option value="significant">Significant - Business outage</option>
+        <option value="moderate">Moderate - Moderate impact</option>
+        <option value="localized">Localized - Low impact</option>
+      </select>
+
+      <label for="impact-outage">Outage:</label>
+      <select id="impact-outage">
+        <option value="">Select</option>
+        <option value="extensive">Extensive - Division-wide</option>
+        <option value="significant">Significant - Regional</option>
+        <option value="moderate">Moderate - Site-wide</option>
+        <option value="localized">Localized - Local</option>
+      </select>
+
+      <label for="impact-users">Impacted Users:</label>
+      <select id="impact-users">
+        <option value="">Select</option>
+        <option value="extensive">100+ users</option>
+        <option value="significant">50-99 users</option>
+        <option value="moderate">6-49 users</option>
+        <option value="localized">1-5 users</option>
+      </select>
+
+      <label for="impact-points">PI Points:</label>
+      <select id="impact-points">
+        <option value="">Select</option>
+        <option value="extensive">2k+ points</option>
+        <option value="significant">1k-2k points</option>
+        <option value="moderate">500-1k points</option>
+        <option value="localized">Less than 500</option>
+      </select>
+    </div>
+
+    <div class="card">
+      <h2>Urgency</h2>
+      <label for="urgency-damage">Damage Increasing:</label>
+      <select id="urgency-damage">
+        <option value="">Select</option>
+        <option value="critical">Critical - Rapid increase</option>
+        <option value="high">High - Considerable increase</option>
+        <option value="medium">Medium - Moderate</option>
+        <option value="low">Low - Marginal</option>
+      </select>
+
+      <label for="urgency-work">Work Stopped:</label>
+      <select id="urgency-work">
+        <option value="">Select</option>
+        <option value="critical">Critical - Highly time sensitive</option>
+        <option value="high">High - Time sensitive</option>
+        <option value="medium">Medium - Inconvenient</option>
+        <option value="low">Low - Not urgent</option>
+      </select>
+
+      <label for="urgency-data">Data:</label>
+      <select id="urgency-data">
+        <option value="">Select</option>
+        <option value="critical">Critical - Loss/unavailable</option>
+        <option value="high">High - Performance issue</option>
+        <option value="medium">Medium - PI Vision issues</option>
+        <option value="low">Low - Point creation/update</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="button-container">
+    <button onclick="calculatePriority()">Calculate Priority</button>
+  </div>
+
+  <p id="result"></p>
+  <div class="error" id="error-message"></div>
+
+  <div class="priority-matrix">
+    <div class="priority-cell priority-1" id="priority-1">1 Critical</div>
+    <div class="priority-cell priority-2" id="priority-2">2 High</div>
+    <div class="priority-cell priority-3" id="priority-3">3 Medium</div>
+    <div class="priority-cell priority-4" id="priority-4">4 Low</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
