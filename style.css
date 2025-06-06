@@ -29,7 +29,7 @@
   font-size: 24px;
   font-weight: bold;
   color: var(--text);
-  align-items: left;
+  text-align: left;
 }
 body {
   margin: 0;
