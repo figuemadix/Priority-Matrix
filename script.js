@@ -39,7 +39,7 @@ high_data: "High - Data unavailable for data consumer or system performance",
 medium_data: "Medium - PI Vision display issue",
 low_data: "Low - PI Point creation or update",
 header_title: "Priority Matrix Tool",
-calculate: "Calculate Priority",
+calculate: "Calculate Priority"
 },
 pt: {
 language: "Selecione o idioma:",    
