@@ -40,7 +40,7 @@ const translations = {
     header_title: "Priority Matrix Tool",
   },
   pt: {
-    language_selector: "Selecione o idioma:",
+    
     impact: "Impacto",
     business: "Negócios:",
     outage: "Interrupção:",
@@ -86,7 +86,7 @@ function changeLanguage() {
   const lang = document.getElementById("language-select").value;
 
   // Update headers
-  document.querySelector(".language-selector")[0].textContent = translations[lang].language_selector;
+ 
   document.querySelector("h1").textContent = translations[lang].header_title;
   document.querySelectorAll(".card > h2")[0].textContent = translations[lang].impact;
   document.querySelectorAll(".card > h2")[1].textContent = translations[lang].urgency;
