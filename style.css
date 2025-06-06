@@ -12,19 +12,6 @@
 * {
   box-sizing: border-box;
 }
-.header {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 20px;
-  padding: 10px 20px;
-}
-
-.logo {
-  height: 50px;
-  width: auto;
- 
-}
 
 body {
   margin: 0;
