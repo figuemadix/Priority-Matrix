@@ -43,7 +43,8 @@ calculate: "Calculate Priority",
 priority_1: "1 Critical",
 priority_2: "2 High",
 priority_3: "3 Medium",
-priority_4: "4 Low"
+priority_4: "4 Low",
+select: "Select"
 },
 pt: {
 language: "Selecione o idioma:",    
@@ -89,7 +90,8 @@ calculate: "Calcular Prioridade",
 priority_1: "1 Crítica",
 priority_2: "2 Alta",
 priority_3: "3 Média",
-priority_4: "4 Baixa"
+priority_4: "4 Baixa",
+select: "Selecione"
 }
 };
 
@@ -116,52 +118,59 @@ document.querySelector("label[for='urgency-data']").textContent = translations[l
 
 // Update Impact business options
 const impactBusiness = document.getElementById("impact-business");
-impactBusiness.options[0].textContent = translations[lang].extensive_business;
-impactBusiness.options[1].textContent = translations[lang].significant_business;
-impactBusiness.options[2].textContent = translations[lang].moderate_business;
-impactBusiness.options[3].textContent = translations[lang].localized_business;
+impactBusiness.options[0].textContent = translations[lang].select;
+impactBusiness.options[1].textContent = translations[lang].extensive_business;
+impactBusiness.options[2].textContent = translations[lang].significant_business;
+impactBusiness.options[3].textContent = translations[lang].moderate_business;
+impactBusiness.options[4].textContent = translations[lang].localized_business;
 
 // Update Impact outage options
 const impactOutage = document.getElementById("impact-outage");
-impactOutage.options[0].textContent = translations[lang].extensive_outage;
-impactOutage.options[1].textContent = translations[lang].significant_outage;
-impactOutage.options[2].textContent = translations[lang].moderate_outage;
-impactOutage.options[3].textContent = translations[lang].localized_outage;
+impactOutage.options[0].textContent = translations[lang].select;
+impactOutage.options[1].textContent = translations[lang].extensive_outage;
+impactOutage.options[2].textContent = translations[lang].significant_outage;
+impactOutage.options[3].textContent = translations[lang].moderate_outage;
+impactOutage.options[4].textContent = translations[lang].localized_outage;
 
 // Update Impact users options
 const impactUsers = document.getElementById("impact-users");
-impactUsers.options[0].textContent = translations[lang].extensive_users;
-impactUsers.options[1].textContent = translations[lang].significant_users;
-impactUsers.options[2].textContent = translations[lang].moderate_users;
-impactUsers.options[3].textContent = translations[lang].localized_users;
+impactUsers.options[0].textContent = translations[lang].select;
+impactUsers.options[1].textContent = translations[lang].extensive_users;
+impactUsers.options[2].textContent = translations[lang].significant_users;
+impactUsers.options[3].textContent = translations[lang].moderate_users;
+impactUsers.options[4].textContent = translations[lang].localized_users;
 
 // Update Impact points options
 const impactPoints = document.getElementById("impact-points");
-impactPoints.options[0].textContent = translations[lang].extensive_points;
-impactPoints.options[1].textContent = translations[lang].significant_points;
-impactPoints.options[2].textContent = translations[lang].moderate_points;
-impactPoints.options[3].textContent = translations[lang].localized_points;
+impactPoints.options[0].textContent = translations[lang].select;
+impactPoints.options[1].textContent = translations[lang].extensive_points;
+impactPoints.options[2].textContent = translations[lang].significant_points;
+impactPoints.options[3].textContent = translations[lang].moderate_points;
+impactPoints.options[4].textContent = translations[lang].localized_points;
 
 // Update Urgency damage options
 const urgencyDamage = document.getElementById("urgency-damage");
-urgencyDamage.options[0].textContent = translations[lang].critical_damage;
-urgencyDamage.options[1].textContent = translations[lang].high_damage;
-urgencyDamage.options[2].textContent = translations[lang].medium_damage;
-urgencyDamage.options[3].textContent = translations[lang].low_damage;
+urgencyDamage.options[0].textContent = translations[lang].select;
+urgencyDamage.options[1].textContent = translations[lang].critical_damage;
+urgencyDamage.options[2].textContent = translations[lang].high_damage;
+urgencyDamage.options[3].textContent = translations[lang].medium_damage;
+urgencyDamage.options[4].textContent = translations[lang].low_damage;
 
 // Update Urgency work options
 const urgencyWork = document.getElementById("urgency-work");
-urgencyWork.options[0].textContent = translations[lang].critical_work;
-urgencyWork.options[1].textContent = translations[lang].high_work;
-urgencyWork.options[2].textContent = translations[lang].medium_work;
-urgencyWork.options[3].textContent = translations[lang].low_work;
+urgencyWork.options[0].textContent = translations[lang].select;
+urgencyWork.options[1].textContent = translations[lang].critical_work;
+urgencyWork.options[2].textContent = translations[lang].high_work;
+urgencyWork.options[3].textContent = translations[lang].medium_work;
+urgencyWork.options[4].textContent = translations[lang].low_work;
 
 // Update Urgency data options
 const urgencyData = document.getElementById("urgency-data");
-urgencyData.options[0].textContent = translations[lang].critical_data;
-urgencyData.options[1].textContent = translations[lang].high_data;
-urgencyData.options[2].textContent = translations[lang].medium_data;
-urgencyData.options[3].textContent = translations[lang].low_data;
+urgencyData.options[0].textContent = translations[lang].select;
+urgencyData.options[1].textContent = translations[lang].critical_data;
+urgencyData.options[2].textContent = translations[lang].high_data;
+urgencyData.options[3].textContent = translations[lang].medium_data;
+urgencyData.options[4].textContent = translations[lang].low_data;
 
 // Update priority matrix labels
 document.getElementById("priority-1").textContent = translations[lang].priority_1;
