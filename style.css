@@ -143,14 +143,14 @@ button {
   font-size: 16px;
   border: none;
   border-radius: var(--border-radius);
-  background-color: #3e6faa;
+  background-color: #0b62cb;
   color: white;
   cursor: pointer;
   transition: background 0.3s;
 }
 
 button:hover {
-  background-color: #305684;
+  background-color: #0b58b4;
 }
 
 #result {
