@@ -39,7 +39,11 @@ high_data: "High - Data unavailable for data consumer or system performance",
 medium_data: "Medium - PI Vision display issue",
 low_data: "Low - PI Point creation or update",
 header_title: "Priority Matrix Tool",
-calculate: "Calculate Priority"
+calculate: "Calculate Priority",
+priority_1: "1 Critical",
+priority_2: "2 High",
+priority_3: "3 Medium",
+priority_4: "4 Low"
 },
 pt: {
 language: "Selecione o idioma:",    
@@ -81,7 +85,11 @@ high_data: "Alto - Dados indisponíveis para o consumidor de dados ou desempenho
 medium_data: "Médio - Problema de exibição do PI Vision",
 low_data: "Baixo - Criação ou atualização de ponto PI",
 header_title: "Ferramenta de Matriz de Prioridade",
-calculate: "Calcular Prioridade"
+calculate: "Calcular Prioridade",
+priority_1: "1 Crítica",
+priority_2: "2 Alta",
+priority_3: "3 Média",
+priority_4: "4 Baixa"
 }
 };
 
@@ -94,7 +102,6 @@ document.querySelector("button[onclick='calculatePriority()']").textContent = tr
 document.querySelector("h1").textContent = translations[lang].header_title;
 document.querySelectorAll(".card > h2")[0].textContent = translations[lang].impact;
 document.querySelectorAll(".card > h2")[1].textContent = translations[lang].urgency;
-//document.options("button[onclick='calculatePriority()']").textContent = translations[lang].calculate;
 
 // Update labels for Impact
 document.querySelector("label[for='impact-business']").textContent = translations[lang].business;
@@ -155,6 +162,12 @@ urgencyData.options[0].textContent = translations[lang].critical_data;
 urgencyData.options[1].textContent = translations[lang].high_data;
 urgencyData.options[2].textContent = translations[lang].medium_data;
 urgencyData.options[3].textContent = translations[lang].low_data;
+
+// Update priority matrix labels
+document.getElementById("priority-1").textContent = translations[lang].priority_1;
+document.getElementById("priority-2").textContent = translations[lang].priority_2;
+document.getElementById("priority-3").textContent = translations[lang].priority_3;
+document.getElementById("priority-4").textContent = translations[lang].priority_4;
 }
 
 window.onload = function () {
