@@ -136,7 +136,7 @@ select {
 .button-container {
   text-align: center;
   margin-top: 20px;
-  color: #f5942c;
+
 }
 
 button {
@@ -145,7 +145,7 @@ button {
   border: none;
   border-radius: var(--border-radius);
   background-color: #0b62cb;
-  color: white;
+  color: #f5942c;
   cursor: pointer;
   transition: background 0.3s;
 }
