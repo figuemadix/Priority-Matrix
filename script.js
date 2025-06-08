@@ -89,7 +89,7 @@ function changeLanguage() {
 const lang = document.getElementById("language-select").value;
 
 // Update headers
-//document.querySelector("label[for='language-select']").textContent = translations[lang].language; 
+document.querySelector("label[for='language-select']").textContent = translations[lang].language; 
 document.querySelector("h1").textContent = translations[lang].header_title;
 document.querySelectorAll(".card > h2")[0].textContent = translations[lang].impact;
 document.querySelectorAll(".card > h2")[1].textContent = translations[lang].urgency;
