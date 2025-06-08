@@ -145,7 +145,7 @@ button {
   border: none;
   border-radius: var(--border-radius);
   background-color: #0b62cb;
-  color: #f5942c;
+  color: #f2e3d3;
   cursor: pointer;
   transition: background 0.3s;
 }
