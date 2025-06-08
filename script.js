@@ -174,7 +174,7 @@ window.onload = function () {
 changeLanguage();
 };
 
-function calculatePriority() {
+/*function calculatePriority() {
 const selects = document.querySelectorAll('select');
 let allSelected = true;
 selects.forEach(select => {
@@ -213,5 +213,57 @@ document.getElementById("result").textContent = `Priority: ${highest} (${labels[
 // Reset highlights
 document.querySelectorAll('.priority-cell').forEach(el => el.classList.remove('highlight'));
 document.getElementById(`priority-${highest}`).classList.add('highlight');
-}
+}*/
 
+function calculatePriority() {
+  const selects = document.querySelectorAll('select');
+  let allSelected = true;
+  selects.forEach(select => {
+    if (!select.value) allSelected = false;
+  });
+
+  const lang = document.getElementById("language-select").value;
+  const errorMessage = document.getElementById("error-message");
+  
+  if (!allSelected) {
+    errorMessage.textContent = lang === 'en' 
+      ? "⚠️ Please fill in all fields." 
+      : "⚠️ Por favor, preencha todos os campos.";
+    return;
+  } else {
+    errorMessage.textContent = "";
+  }
+
+  const map = {
+    extensive: 1,
+    significant: 2,
+    moderate: 3,
+    localized: 4,
+    critical: 1,
+    high: 2,
+    medium: 3,
+    low: 4
+  };
+
+  const inputs = [
+    "impact-business", "impact-outage", "impact-users", "impact-points",
+    "urgency-damage", "urgency-work", "urgency-data"
+  ];
+
+  const values = inputs.map(id => map[document.getElementById(id).value.split('-')[0]]);
+  const highest = Math.min(...values);
+  
+  // Get the priority label without the number (removes "1 " from "1 Critical")
+  const priorityLabel = document.getElementById(`priority-${highest}`)
+    .textContent.split(' ')[1];
+  
+  // Update result display with translation
+  document.getElementById("result").textContent = 
+    lang === 'en' 
+      ? `Priority: ${highest} (${priorityLabel})` 
+      : `Prioridade: ${highest} (${priorityLabel})`;
+
+  // Reset highlights
+  document.querySelectorAll('.priority-cell').forEach(el => el.classList.remove('highlight'));
+  document.getElementById(`priority-${highest}`).classList.add('highlight');
+}
